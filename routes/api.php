@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CompanyController;
+use App\Http\Controllers\Api\EmployeeController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,3 +17,5 @@ use App\Http\Controllers\Api\CompanyController;
 
 
 Route::apiResource('company', CompanyController::class);
+Route::apiResource('employee', EmployeeController::class);
+Route::get('get-companies', [CompanyController::class,'getAllCompanies'])->name('get.companies');

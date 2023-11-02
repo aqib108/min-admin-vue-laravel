@@ -3,6 +3,7 @@ import Home from './components/pages/Home.vue';
 import Employees from './components/pages/Employees.vue';
 import Companies from './components/pages/Companies.vue';
 import CreateCompany from './components/pages/Create-company.vue';
+import CreateEmployee from './components/pages/Create-employee.vue';
 const routes = [
   {
     path: '/',
@@ -20,6 +21,12 @@ const routes = [
     path: '/create-company/:id?',
     name:'save-company',
     component: CreateCompany,
+    props:true
+  },
+  {
+    path: '/create-employee/:id?',
+    name:'save-employee',
+    component: CreateEmployee,
     props:true
   },
 ];

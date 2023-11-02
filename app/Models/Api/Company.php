@@ -23,4 +23,8 @@ class Company extends Model
         return $value;
         
     }
+    public function employees()
+    {
+        return $this->hasMany(Employee::class);
+    }
 }
